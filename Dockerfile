@@ -1,8 +1,7 @@
 FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 
 # Install dependencies
-RUN yum update -y && \
- yum install -y httpd
+RUN yum update -y && yum install -y httpd
 
 # Install apache and write hello world message
 RUN echo 'Hello World!' > /var/www/html/index.html
